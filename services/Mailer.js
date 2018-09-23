@@ -10,7 +10,7 @@ class Mailer {
 	}
 
 	setSettings() {
-		this.email = process.env.email
+		this.email = process.env.EMAIL
 		this.clientId = process.env.email_clientId
 		this.clientSecret = process.env.email_clientSecret
 		this.refreshToken = process.env.email_refreshToken

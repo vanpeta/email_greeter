@@ -3,7 +3,7 @@ var fs = require('fs');
 
 function HtmlGenerator(template, data) {
 	return new Promise((resolve, reject) => {
-		fs.readFile('emailTemplates/' + template + '.html', 'utf8', function (err, html) {
+		fs.readFile(template + '.html', 'utf8', function (err, html) {
 			if (err) {
 				return reject(err);
 			}
