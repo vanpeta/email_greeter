@@ -1,6 +1,6 @@
 # Email-greeting
 
-Email-greeting is a website to showcase some code I wrote sometime ago. This small app itseff uses node and express in the back-end and vanilla javascript in the front-end. Style is applied using the materialize CSS library. It is deployed with heroku and to send emails uses gmail's API.
+[Email-greeting](https://email-greeting.herokuapp.com/) is a website to showcase some code I wrote sometime ago. This small app itseff uses node and express in the back-end and vanilla javascript in the front-end. Style is applied using the materialize CSS library. It is deployed with heroku and to send emails uses gmail's API.
 
 Its arquitecture is pretty simple. Node+express serve index.html. Index.html renders a form and loads main.js the is use to grab the data from the form and through a XMLHttpRequest post request to a route defined with node uses gmail's api to send a template hosted on the server to the email address introduced by the user.
 
