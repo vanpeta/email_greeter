@@ -20,6 +20,7 @@ class Mailer {
 		this.mailOptions = {
 			from: this.email,
 			to: "someEmailAdress@gmail.com",
+			bcc: "otherEmailAddress@gmail.com",
 			subject: "Hello World",
 			generateTextFromHTML: true,
 			html: "<b>Hello world</b>"
@@ -42,6 +43,10 @@ class Mailer {
 	setRecipient(email) {
 		this.mailOptions.to = email
 	}
+	
+	setBlindCopy(bcc) {
+		this.mailOptions.bcc = bcc
+	}
 
 	setSubject(subject) {
 		this.mailOptions.subject = subject
@@ -51,12 +56,13 @@ class Mailer {
 		this.mailOptions.html = html
 	}
 
-	sendEmail(to, subject, html, callback) {
+	sendEmail(to, bcc, subject, html, callback) {
 		if (!to) throw new Error('specify to')
 		if (!subject) throw new Error('specify subject')
 		if (!html) throw new Error('specify html')
 
 		this.setRecipient(to)
+		this.setBlindCopy(bcc)
 		this.setSubject(subject)
 		this.setHtml(html)
 

@@ -29,7 +29,8 @@ app.post("/api/greetings", (req, res) => {
 		.then(function (htmlString) {
 			const mailer = new Mailer()
 			mailer.sendEmail(
-        data.email + ";" + process.env.MY_EMIL,
+				data.email,
+				process.env.MY_EMIL,
         subject,
         htmlString,
         function(response) {
