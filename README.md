@@ -121,7 +121,7 @@ class Mailer {
 module.exports = Mailer
 ```
 
-I also learnt that pushing yourself to do something the write way pays off. I've been able to use this mailer several times. It is very versatile and easy to implement.
+I also learnt that pushing yourself to do something the right way pays off. I've been able to use this mailer several times. It is very versatile and easy to implement.
 
 
 
